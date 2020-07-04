@@ -29,8 +29,8 @@
             <thead class="thead-light text-center">
             <tr>
               <th scope="col">Mã hóa đơn</th>
-              <th scope="col">Ngày lập hóa đơn/th>
-              <th scope="col">Mã khách hàng</th>
+              <th scope="col">Ngày lập hóa đơn</th>
+              <th scope="col">Mã hóa đơn</th>
               <th scope="col">Tổng tiền</th>
               <th scope="col">Hành động</th>
           </tr>
