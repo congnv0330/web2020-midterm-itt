@@ -30,7 +30,7 @@
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Tên loại hàng hóa</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control " id="name" name="name" placeholder="Enter your name ..." value="" required="">
+                        <input type="text" class="form-control " id="name" name="name" placeholder="Nhập tên loại hàng hóa" value="" required="">
                     </div>
                 </div>
                 
