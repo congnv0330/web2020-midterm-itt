@@ -9,29 +9,38 @@
 <body>
 <h3 class="text-center"> Xác nhận đơn hàng</h3>
     <div class="container">
-    <form>
-    <div class="form-group">
-    <label for="exampleInputPassword1">Thông tin sản phẩm</label>
-  </div>
-    <table id="data-table" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Mã hàng hóa</th>
-                        <th>Tên hàng hóa</th>
-                        <th>Đơn giá</th>
-                        <th>Hình</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>   
-  <div class="form-group">
-    <label for="thename">Tên khách hàng</label>
-    <input type="name" class="form-control" id="thename" aria-describedby="Nhập họ và tên...">
-     </div>
-     <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    	<label for="exampleInputPassword1">Thông tin sản phẩm</label>
+    	<table class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+			<thead>
+				<tr>
+					<th>Hình</th>
+					<th>Tên hàng hóa</th>
+					<th>Đơn giá</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($hanghoas as $hanghoa) : ?>
+					<tr>
+						<td>
+							<img src="<?= $hanghoa['Hinh'] ?>" alt="" width="100">
+						</td>
+						<td><?= $hanghoa['TenHH'] ?></td>
+						<td><?= number_format($hanghoa['DonGia']) ?></td>
+					</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>   
+		<form action="#" methods="post">
+			<?php foreach($hanghoas as $hanghoa) : ?>
+				<input type="hidden" name="MaHH[]" value="<?= $hanghoa['MaHH'] ?>">
+				<input type="hidden" name="DonGia[]" value="<?= $hanghoa['DonGia'] ?>">
+			<?php endforeach ?>
+			<div class="form-group">
+				<label for="name">Tên khách hàng</label>
+				<input type="text" class="form-control" id="name" name="TenKH" placeholder="Nhập họ và tên...">
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
     <script src="<?= base_url('assets/bootstrap/js/bootstrap.min.js') ?>"></script>
 </body>
 </html>

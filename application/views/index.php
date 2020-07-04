@@ -17,6 +17,9 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="<?= base_url() ?>">Trang chủ</a>
 				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="<?= base_url('index.php/Home/hoadon') ?>">Giỏ hàng <?= count($_SESSION['hanghoas']) ?></a>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Quản lý</a>
 				</li>
@@ -33,7 +36,7 @@
 						<div class="card-body text-center">
 							<h5 class="card-title"><?= $hanghoa['TenHH'] ?></h5>
 							<p class="card-text">Giá: <?= number_format($hanghoa['DonGia']) ?></p>
-							<a href="#" class="btn btn-primary">Chọn</a>
+							<a href="<?= base_url('index.php/Home/storeHH/' . $hanghoa['MaHH']) ?>" class="btn btn-primary">Chọn</a>
 						</div>
 					</div>
 				</div>
