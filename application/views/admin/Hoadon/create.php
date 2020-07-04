@@ -14,30 +14,31 @@
         <div class="card">
           <div class="card-body">
           <div class="text-left mb-3">
-            <a href="<?= base_url('index.php/admin/Hanghoa/index') ?>" id="btnBack" class="btn btn-primary">Quay về </a>
+            <a href="<?= base_url('index.php/admin/Hoadon/index') ?>" id="btnBack" class="btn btn-primary">Quay về </a>
           </div>
-          <h4 class="card-title"><i class="mdi mdi-format-list-bulleted-type"></i> Thêm hàng hóa</h4>          
+          <h4 class="card-title"><i class="mdi mdi-format-list-bulleted-type"></i> Thêm hóa đơn</h4>          
         </div>
         <div class="card-body">
             <form action="#" method="post">
                 <input type="hidden" name="_token" value="uRHGWpTT8FrXAx7rRoAwCdeWLhvhdFrwKRVYpUga">                
                 <div class="form-group row">
-                    <label for="code" class="col-sm-2 col-form-label">Mã hàng hóa</label>
+                    <label for="code" class="col-sm-2 col-form-label">Mã hóa đơn</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control " id="code" name="code" placeholder="Nhập mã" value="" required="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="name" class="col-sm-2 col-form-label">Tên hàng hóa</label>
+                    <label for="name" class="col-sm-2 col-form-label">Tên hóa đơn</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control " id="name" name="name" placeholder="Nhập tên ..." value="" required="">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="parent" class="col-md-2 col-form-label">Loại</label>
+                    <label for="parent" class="col-md-2 col-form-label">Ngày lập hóa đơn</label>
                     <div class="col-md-10">
-                      <select name="role" id="role" class="custom-select ">
-                      </select>
+                      <div>
+                      <input type="text" class="form-control " id="date" name="date" placeholder="Nhập ngày ..." value="" required="">
+                      </div>
                   </div>
                 </div>
                 <div class="form-group row">
