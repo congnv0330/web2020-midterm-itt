@@ -5,7 +5,11 @@ class Home extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('index');
+		$this->load->model('Hanghoa_model');
+		$hanghoas = $this->Hanghoa_model->getAll();
+		$this->load->view('index', [
+			'hanghoas' => $hanghoas
+		]);
 	}
 
 	public function hoadon()

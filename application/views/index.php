@@ -24,20 +24,20 @@
 		</div>
 	</nav>
 	<div class="container-fluid py-3">
-		<h4 class="mb-4"><center>DANH SÁCH SẢN PHẨM</center></h4>
+		<h4 class="text-center mb-4">DANH SÁCH SẢN PHẨM</h4>
 		<div class="row">
-			<?php for($i = 0; $i < 8; ++$i) : ?>
+			<?php foreach($hanghoas as $hanghoa) : ?>
 				<div class="col-md-4 col-lg-3">
 					<div class="card mb-4">
-						<img src="https://salt.tikicdn.com/cache/280x280/ts/product/46/9d/88/6560a409f40c37ac63d4e279bbea34b7.jpg" class="card-img-top" alt="">
+						<img src="<?= $hanghoa['Hinh'] ?>" class="card-img-top" alt="">
 						<div class="card-body text-center">
-							<h5 class="card-title">Sản phẩm</h5>
-							<p class="card-text">Giá: </p>
+							<h5 class="card-title"><?= $hanghoa['TenHH'] ?></h5>
+							<p class="card-text">Giá: <?= number_format($hanghoa['DonGia']) ?></p>
 							<a href="#" class="btn btn-primary">Chọn</a>
 						</div>
 					</div>
 				</div>
-			<?php endfor ?>
+			<?php endforeach ?>
 		</div>
 	</div>
 	<script src="<?= base_url('assets/bootstrap/js/bootstrap.min.js') ?>"></script>
