@@ -11,7 +11,7 @@ class Hanghoa_model extends CI_Model
 
 	public function getById($id)
 	{
-		return $this->db->get_where($this->table, ['id' => $id])->row_array();
+		return $this->db->get_where($this->table, ['MaHH' => $id])->row_array();
 	}
 
 	public function create($params)
@@ -22,7 +22,7 @@ class Hanghoa_model extends CI_Model
 	
     public function update($id, $params)
     {
-		$this->db->where('id', $id);
+		$this->db->where('MaHH', $id);
 		return $this->db->update($this->table, $params);
 	}
 	

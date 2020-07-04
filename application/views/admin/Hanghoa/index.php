@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Trang chủ</title>
+	<title>Hàng hóa</title>
 	<link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
 </head>
 <body>
@@ -36,7 +36,24 @@
               <th scope="col">Hành động</th>
           </tr>
           </thead>
-          <tbody>    
+          <tbody>
+            <?php foreach($hanghoa as $hanghoavar) : ?>
+              <tr>
+                <td><?= $hanghoavar['MaHH'] ?></td>
+                <td><?= $hanghoavar['MaLoai'] ?></td>
+                <td><?= $hanghoavar['TenHH'] ?></td>
+                <td><?= $hanghoavar['DonGia'] ?></td>
+                <td><img src="<?=$hanghoavar['Hinh']?>" width="50"></td>
+                <td>
+                <a href="<?= base_url('index.php/admin/Hanghoa/edit/' .$hanghoavar['MaHH']) ?>" class="btn btn-info">
+                  <i class="fas fa-plus"></i> Sửa 
+                </a>
+                <a href="#" class="btn btn-danger">
+                  <i class="fas fa-plus"></i> Xóa 
+              </a>
+                </td>
+              </tr>
+              <?php endforeach ?>    
           </tbody>
           </table>
         </div>

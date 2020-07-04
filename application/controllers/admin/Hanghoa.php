@@ -5,19 +5,48 @@ class HangHoa extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('admin/Hanghoa/index');
+		$this->load->model('Hanghoa_model');
+		$hanghoa = $this->Hanghoa_model->getAll();
+		$this->load->view('admin/Hanghoa/index', [
+			'hanghoa'=> $hanghoa
+		]);
   }
  
   public function create()
 	{
-		$this->load->view('admin/Hanghoa/create');
+		$this->load->model('Loai_model');
+		$loais = $this->Loai_model->getAll();
+		$this->load->view('admin/Hanghoa/create',[
+			'loais'=> $loais
+		]);
 	}
 	
 	
-  public function edit()
+  public function edit($MaHH)
 	{
-		$this->load->view('admin/Hanghoa/edit');
-  }
+		$this->load->model('Hanghoa_model');
+		$this->load->model('Loai_model');
+		$hanghoa = $this->Hanghoa_model->getById($MaHH);
+		$loais = $this->Loai_model->getAll();
+		$this->load->view('admin/Hanghoa/edit',[
+			'hanghoa'=> $hanghoa,
+			'loais'=> $loais
+		]);
+	}
+	
+	public function store(){
+		$params = $this->input->post();
+		$this->load->model('Hanghoa_model');
+		$this->Hanghoa_model->create($params);
+		redirect(base_url('index.php/admin/Hanghoa/index'));
+	}
+
+	public function update($MaHH){
+		$params = $this->input->post();
+		$this->load->model('Hanghoa_model');
+		$this->Hanghoa_model->update($MaHH,$params);
+		redirect(base_url('index.php/admin/Hanghoa/index'));
+	}
 }
 
 

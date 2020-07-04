@@ -19,38 +19,40 @@
           <h4 class="card-title"><i class="mdi mdi-format-list-bulleted-type"></i> Thêm hàng hóa</h4>          
         </div>
         <div class="card-body">
-            <form action="#" method="post">
-                <input type="hidden" name="_token" value="uRHGWpTT8FrXAx7rRoAwCdeWLhvhdFrwKRVYpUga">                
+            <form action="<?= base_url('index.php/admin/Hanghoa/update/' . $hanghoa['MaHH']) ?>" method="post">
                 <div class="form-group row">
                     <label for="code" class="col-sm-2 col-form-label">Mã hàng hóa</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control " id="code" name="code" value="" required="" readonly>
+                      <input type="text" class="form-control " id="code" name="MaHH" value="<?= $hanghoa['MaHH'] ?>" required="" readonly>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Tên hàng hóa</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control " id="name" name="name" placeholder="Enter your name ..." value="" required="">
+                        <input type="text" class="form-control " id="name" name="TenHH" placeholder="Enter your name ..." value="<?= $hanghoa['TenHH'] ?>" required="">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="parent" class="col-md-2 col-form-label">Loại</label>
                     <div class="col-md-10">
-                      <select name="role" id="role" class="custom-select ">
+                      <select name="MaLoai" id="role" class="custom-select ">
+                      <?php foreach($loais as $loai) : ?>
+                        <option value="<?= $loai['MaLoai'] ?>" <?php if($hanghoa['MaLoai'] == $loai['MaLoai']) echo "selected"  ?>><?= $loai['TenLoai'] ?></option>
+                        <?php endforeach ?>    
                       </select>
                   </div>
                 </div>
                 <div class="form-group row">
                     <label for="price" class="col-sm-2 col-form-label">Đơn giá</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control " id="price" name="price" placeholder="Enter your price vnđ..." value="" required="">
+                        <input type="text" class="form-control " id="price" name="DonGia" placeholder="Enter your price vnđ..." value="<?= $hanghoa['DonGia'] ?>" required="">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="image" class="col-sm-2 col-form-label">Hình</label>
                     <div class="col-sm-10">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFileLang" lang="pl-Pl">
+                        <input type="file" class="custom-file-input" id="customFileLang" name="Hinh" lang="pl-Pl">
                         <label class="custom-file-label" for="customFileLang">Chọn ảnh</label>
                       </div>
                     </div>
