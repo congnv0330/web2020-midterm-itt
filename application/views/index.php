@@ -7,6 +7,39 @@
 	<link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="<?= base_url() ?>"><img class="img-fluid m-auto" src="https://www.upsieutoc.com/images/2020/07/04/Logo.png" alt="Logo" width="30"> <strong>ITT</strong>Shop</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="<?= base_url() ?>">Trang chủ</a>
+				</li>
+				<!--<li class="nav-item">
+					<a class="nav-link" href="#">Quản lý</a>
+				</li>-->
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid py-3">
+		<h4 class="mb-4"><center>DANH SÁCH SẢN PHẨM</center></h4>
+		<div class="row">
+			<?php for($i = 0; $i < 8; ++$i) : ?>
+				<div class="col-md-4 col-lg-3">
+					<div class="card mb-4">
+						<img src="https://salt.tikicdn.com/cache/280x280/ts/product/46/9d/88/6560a409f40c37ac63d4e279bbea34b7.jpg" class="card-img-top" alt="">
+						<div class="card-body text-center">
+							<h5 class="card-title">Sản phẩm</h5>
+							<p class="card-text">Giá: </p>
+							<a href="#" class="btn btn-primary">Chọn</a>
+						</div>
+					</div>
+				</div>
+			<?php endfor ?>
+		</div>
+	</div>
 	<script src="<?= base_url('assets/bootstrap/js/bootstrap.min.js') ?>"></script>
 </body>
 </html>
