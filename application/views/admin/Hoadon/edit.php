@@ -45,15 +45,7 @@
                         <input type="text" class="form-control " id="price" name="price" placeholder="Sửa đơn giá..." value="" required="">
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="image" class="col-sm-2 col-form-label">Hình</label>
-                    <div class="col-sm-10">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFileLang" lang="pl-Pl">
-                        <label class="custom-file-label" for="customFileLang">Chọn ảnh</label>
-                      </div>
-                    </div>
-                </div>
+              
                 <button type="submit" class="btn btn-primary">Xác nhận</button>
             </form>
         </div>
