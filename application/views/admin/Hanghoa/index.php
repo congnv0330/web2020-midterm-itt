@@ -21,9 +21,9 @@
               <a href="<?= base_url('index.php/admin/Hanghoa/create') ?>" class="btn btn-primary">
                   <i class="fas fa-plus"></i> Thêm hàng hóa 
               </a>
-              <button id="btn-reload" class="btn btn-secondary float-right">
-                  <i class="fas fa-sync"></i> Tải lại
-              </button>
+              <a href="<?= base_url('index.php/admin/Hanghoa') ?>" class="btn btn-secondary float-right">
+                  <i class="fas fa-plus"></i> Tải lại
+              </a>
           </div>
           <table class="table">
             <thead class="thead-light text-center">
@@ -36,7 +36,7 @@
               <th scope="col">Hành động</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody class="text-center">
             <?php foreach($hanghoa as $hanghoavar) : ?>
               <tr>
                 <td><?= $hanghoavar['MaHH'] ?></td>
@@ -48,7 +48,7 @@
                 <a href="<?= base_url('index.php/admin/Hanghoa/edit/' .$hanghoavar['MaHH']) ?>" class="btn btn-info">
                   <i class="fas fa-plus"></i> Sửa 
                 </a>
-                <a href="#" class="btn btn-danger">
+                <a href="<?= base_url('index.php/admin/Hanghoa/delete/' .$hanghoavar['MaHH']) ?>" class="btn btn-danger">
                   <i class="fas fa-plus"></i> Xóa 
               </a>
                 </td>

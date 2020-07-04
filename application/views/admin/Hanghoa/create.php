@@ -49,6 +49,7 @@
                         <input type="file" class="custom-file-input" id="Hinh"  name="Hinh" lang="pl-Pl">
                         <label class="custom-file-label" for="customFileLang">Chọn ảnh</label>
                       </div>
+                      <!-- //<img src="<?=$hanghoavar['Hinh']?>" width="50"> -->
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Xác nhận</button>
