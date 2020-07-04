@@ -21,6 +21,9 @@
               <a href="<?= base_url('index.php/admin/Hoadon/create') ?>" class="btn btn-primary">
                   <i class="fas fa-plus"></i> Thêm hóa đơn
               </a>
+              <a href="<?= base_url('index.php/admin/Hoadon/edit') ?>" class="btn btn-primary">
+                  <i class="fas fa-plus"></i> Sửa hóa đơn
+              </a>
               <button id="btn-reload" class="btn btn-secondary float-right">
                   <i class="fas fa-sync"></i> Tải lại
               </button>
