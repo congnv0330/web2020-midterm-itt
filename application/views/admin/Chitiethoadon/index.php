@@ -34,7 +34,15 @@
               <th scope="col">Số lượng</th>
           </tr>
           </thead>
-          <tbody>    
+          <tbody class="text-center">
+            <?php foreach($chitiethoadon as $chitiethoadon) : ?>
+              <tr>
+                <td><?= $chitiethoadon['MaCTHD'] ?></td>
+                <td><?= $chitiethoadon['MaHD'] ?></td>
+                <td><?= $chitiethoadon['MaHH'] ?></td>
+                <td><?= $chitiethoadon['SoLuong'] ?></td>
+              </tr>
+              <?php endforeach ?>    
           </tbody>
           </table>
         </div>

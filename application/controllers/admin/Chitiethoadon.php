@@ -5,7 +5,11 @@ class Chitiethoadon extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('admin/Chitiethoadon/index');
+		$this->load->model('Chitiethoadon_model');
+		$chitiethoadon = $this->Chitiethoadon_model->getAll();
+		$this->load->view('admin/Chitiethoadon/index', [
+			'chitiethoadon'=> $chitiethoadon
+		]);
   }
  
   public function create()
