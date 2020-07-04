@@ -7,4 +7,9 @@ class Home extends CI_Controller
 	{
 		$this->load->view('index');
 	}
+
+	public function hoadon()
+	{
+		$this->load->view('hoadon');
+	}
 }
