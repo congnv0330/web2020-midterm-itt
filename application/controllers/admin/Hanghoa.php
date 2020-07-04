@@ -47,6 +47,12 @@ class HangHoa extends CI_Controller
 		$this->Hanghoa_model->update($MaHH,$params);
 		redirect(base_url('index.php/admin/Hanghoa/index'));
 	}
+
+	public function delete($MaHH){
+		$this->load->model('Hanghoa_model');
+		$this->Hanghoa_model->delete($MaHH);
+		redirect(base_url('index.php/admin/Hanghoa/index'));
+	}
 }
 
 
