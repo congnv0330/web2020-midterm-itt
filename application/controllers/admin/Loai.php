@@ -5,7 +5,11 @@ class Loai extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('admin/Loai/index');
+		$this->load->model('Loai_model');
+		$loai = $this->Loai_model->getAll();
+		$this->load->view('admin/Loai/index', [
+			'loais'=> $loai
+		]);
   }
     
   public function create()

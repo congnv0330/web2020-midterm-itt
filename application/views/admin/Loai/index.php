@@ -33,11 +33,26 @@
             <tr>
               <th scope="col">Mã loại hàng hóa</th>
               <th scope="col">Tên loại hàng hóa</th>
-            
+              <th scope="col">Mô tả</th>
               <th scope="col">Hành động</th>
           </tr>
           </thead>
-          <tbody>    
+          <tbody class="text-center">  
+          <?php foreach($loais as $loai) : ?>
+              <tr>
+                <td><?= $loai['MaLoai'] ?></td>
+                <td><?= $loai['TenLoai'] ?></td>
+                <td><?= $loai['MoTa'] ?></td>
+                <td>
+                <a href="<?= base_url('index.php/admin/Loai/edit/' .$loai['MaLoai']) ?>" class="btn btn-info">
+                  <i class="fas fa-plus"></i> Sửa 
+                </a>
+                <a href="<?= base_url('index.php/admin/Hanghoa/delete/' .$loai['MaLoai']) ?>" class="btn btn-danger">
+                  <i class="fas fa-plus"></i> Xóa 
+              </a>
+                </td>
+              </tr>
+              <?php endforeach ?>   
           </tbody>
           </table>
         </div>
