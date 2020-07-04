@@ -50,6 +50,8 @@ class HangHoa extends CI_Controller
 
 	public function delete($MaHH){
 		$this->load->model('Hanghoa_model');
+		$this->load->model('Chitiethoadon_model');
+		$this->Chitiethoadon_model->delete($MaHH);
 		$this->Hanghoa_model->delete($MaHH);
 		redirect(base_url('index.php/admin/Hanghoa/index'));
 	}
