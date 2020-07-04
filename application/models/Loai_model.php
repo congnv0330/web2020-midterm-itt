@@ -2,11 +2,11 @@
 
 class Loai_model extends CI_Model 
 {
-	protected $table = 'Loai';
+	protected $table = 'loai';
 
 	public function getAll()
 	{
-		return $this->db->get($this->$table)->result_array();
+		return $this->db->get($this->table)->result_array();
 	}
 
 	public function getById($MaLoai)

@@ -2,11 +2,11 @@
 
 class Hoadon_model extends CI_Model 
 {
-	protected $table = 'Hoadon';
+	protected $table = 'hoadon';
 
 	public function getAll()
 	{
-		return $this->db->get($this->$table)->result_array();
+		return $this->db->get($this->table)->result_array();
 	}
 
 	public function getByMaHD($MaHD)

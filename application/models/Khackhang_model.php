@@ -2,11 +2,11 @@
 
 class Khachhang_model extends CI_Model 
 {
-	protected $table = 'KhachHang';
+	protected $table = 'khachhang';
 
 	public function getAll()
 	{
-		return $this->db->get($this->$table)->result_array();
+		return $this->db->get($this->table)->result_array();
 	}
 
 	public function getByMaKH($MaKH)

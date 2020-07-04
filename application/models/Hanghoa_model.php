@@ -2,11 +2,11 @@
 
 class Hanghoa_model extends CI_Model 
 {
-	protected $table = 'HangHoa';
+	protected $table = 'hanghoa';
 
 	public function getAll()
 	{
-		return $this->db->get($this->$table)->result_array();
+		return $this->db->get($this->table)->result_array();
 	}
 
 	public function getById($id)
